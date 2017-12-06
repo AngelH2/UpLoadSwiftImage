@@ -150,6 +150,24 @@ URLSessionDataDelegate{
         alerta.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alerta, animated: true, completion: nil)
     }
+    
+    /*
+     PHP CODE ========
+     if(is_array($_FILES["image"]["name"]) || is_object($_FILES["image"]["name"]))
+     {
+         foreach(($_FILES['image']['name']) as $key=>$val)
+         {
+             $file_name = $key.$_FILES['image']['name'][$key];
+             $file_tmp =$_FILES['image']['tmp_name'][$key];
+     
+             $target_dir = "imagenes/".$file_name.".jpg";
+             if (move_uploaded_file($file_tmp, $target_dir))
+             {
+                 //
+             }
+         }
+     }
+     */
 }
 extension Data
 {
